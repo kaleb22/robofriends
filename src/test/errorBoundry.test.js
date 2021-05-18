@@ -7,7 +7,6 @@ it('renders ErrorBoundry component', () => {
 })
 
 it('has an error', () => {
-  
   const wrapper = shallow(<ErrorBoundry/>);
   expect(wrapper.instance().componentDidCatch()).toEqual(undefined);
 })
