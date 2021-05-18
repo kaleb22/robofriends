@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render MainPage component 1`] = `ShallowWrapper {}`;
+
+exports[`expects to render MainPage component 1`] = `ShallowWrapper {}`;
+
+exports[`renders MainPage component 1`] = `ShallowWrapper {}`;

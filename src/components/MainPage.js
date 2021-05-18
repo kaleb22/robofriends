@@ -7,17 +7,19 @@ import '../containers/App.css'
 
 class MainPage extends Component {
 
-    componentDidMount() {
-      this.props.onRequestRobots();
-    }
+  componentDidMount() {
+    this.props.onRequestRobots();
+  }
+
+  filteredRobots = () => {
+    return this.props.robots.filter(robot => {
+      return robot.name.toLowerCase().includes(this.props.searchField.toLowerCase());
+    });
+  }
 
   render() {
-    const { searchField, onSearchChange, robots, isPending } = this.props;
+    const { onSearchChange, isPending } = this.props;
     
-    const filteredRobots = robots.filter(robot => {
-      return robot.name.toLowerCase().includes(searchField.toLowerCase());
-    });
-      
     return isPending ?
       <h1>Loading...</h1> :
     (
@@ -26,7 +28,7 @@ class MainPage extends Component {
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
           <ErrorBoundry>
-            <CardList robots={filteredRobots}/>
+            <CardList robots={this.filteredRobots()}/>
           </ErrorBoundry>
         </Scroll>
       </div>
