@@ -12,6 +12,8 @@ h1 {
     color: #0ccac4;
 }
 
-.hide-scrollbar {
+.scrollbar-container {
     scrollbar-width: none;
+    overflow: auto;
+    height: calc(100vh - 190px);
 }

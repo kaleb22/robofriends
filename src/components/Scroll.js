@@ -3,7 +3,7 @@ import '../containers/App.css'
 
 const Scroll = (props) => {
     return (
-        <div style={{ overflow: 'auto', height: '500px'}} className='hide-scrollbar'>
+        <div className='scrollbar-container'>
             {props.children}
         </div>
     );
